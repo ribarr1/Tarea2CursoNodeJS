@@ -1,0 +1,54 @@
+
+{{>header}}
+
+
+<div class="container-fluid">
+
+
+  	 <p>
+  	 	Bienvenido Coordinador <br><br>
+
+  	 	Formulario para cargar los cursos 
+  	 </p>
+
+ <form action="/creaCurso" method="post">
+  <table>
+  <tr align="right">
+    <th><label for="id">* Id: </label></th>
+    <th> <input type="text" name="id" required></th>
+  </tr>
+  <tr align="right">
+    <td><label for="nombre">* Nombre:  </label></td>
+    <td><input type="text" name="nombre" required></td>
+  </tr>
+  <tr align="right">
+    <td><label for="descripcion">* Descripcion:  </label></td>
+    <td><input type="text" name="descripcion" required></td>
+  </tr>
+  <tr align="right">
+    <td><label for="valor">* Valor:  </label></td>
+    <td><input type="number" name="valor" required></td>
+  </tr>
+  <tr >
+    <td align="right"><label for="modalidad">Modalidad:  </label></td>
+    <td align="left"><select name="modalidad">
+      <option value="presencial">Presencial</option>
+    <option value="virtual" selected>Virtual</option>
+  </select></td>
+  </tr>
+  <tr align="right">
+    <td><label for="horas">Duracion en horas:  </label></td>
+    <td><input type="number" name="horas"><br><br></td>
+  </tr>
+  
+</table>
+     <button>Enviar</button><br><br>
+</form>
+
+<form action="/">
+    <input type="submit" value="Volver al Inicio" />
+</form>
+
+</div>
+
+{{>footer}}

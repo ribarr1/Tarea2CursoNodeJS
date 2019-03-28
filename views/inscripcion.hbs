@@ -1,0 +1,36 @@
+
+{{>header}}
+
+
+<div class="container">
+  	 <p>
+  	 	Bienvenido Aspirante <br><br>
+
+  	 	Formulario para inscribirse en un curso
+  	 </p>
+
+
+
+
+<form action="/creaInscripcion" method="post">
+  <div class="container mw-50"  >
+  <div class="form-group ">
+    <label for="documento">* Documento de identidad: </label>
+    <input type="text" class="form-control" name="documento" placeholder="Ingresar Documento de indentidad" required="true">
+    </div>
+  <div class="form-group">
+    <label for="nombre">* Nombre:  </label>
+    <input type="text" class="form-control" name="Nombre" placeholder="Ingresa tu nombre completo" required="true">
+  </div>
+  <label for="correo">Correo electronico</label>
+    <input type="email" class="form-control" name="correo" aria-describedby="emailHelp" placeholder="Ingresa tu correo electronico" required="true">
+    <small id="emailHelp" class="form-text text-muted">Nunca compartimos tu direccion de correo</small>
+   <div class="form-group">
+    <label for="nombre">* Telefono:  </label>
+    <input type="text" class="form-control" name="telefono" placeholder="Ingresa tu numero de telefono" required="true">
+  </div>
+  <button type="submit" class="btn btn-primary">Enviar</button>
+  </div>
+</form>
+
+{{>footer}}
