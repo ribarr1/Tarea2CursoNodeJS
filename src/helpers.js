@@ -26,39 +26,49 @@ hbs.registerHelper('detalleCurso', (id) =>{
 	if(curso=="no existe el curso")
 		return curso;
 	else{
-		texto = `<table class="table" table-bordered>
-				  <tr align="right">
+		texto = `
+					<table class="table table-bordered table-condensed" >
+				<div class="col-xs-3"> 	
+				  <tr align="right"> 
 				    <td><label> Id: </label></td>
-				    <td> <label>`+ curso.id +`</label></td>
+				    <td align="left"> <label>`+ curso.id +`</label></td>
 				  </tr>
+				  
 				  <tr align="right">
 				    <td><label>* Nombre:  </label></td>
-				    <td> <label>`+ curso.nombre +`</label></td>
+				    <td align="left"> <label>`+ curso.nombre +`</label></td>
 				  </tr>
 				  <tr align="right">
 				    <td><label>* Descripcion:  </label></td>
-				    <td> <label>`+ curso.descripcion +`</label></td>
+				    <td align="left"> <label>`+ curso.descripcion +`</label></td>
 				  </tr>
 				  <tr align="right">
 				    <td><label>* Valor:  </label></td>
-				    <td> <label>`+ curso.valor +`</label></td>
+				    <td align="left"> <label>`+ curso.valor +`</label></td>
 				  </tr>
 				  <tr align="right">
 				    <td ><label>Modalidad:  </label></td>
-				    <td> <label>`+ curso.modalidad +`</label></td>
+				    <td align="left"> <label>`+ curso.modalidad +`</label></td>
 				  </tr>
 				  <tr align="right">
 				    <td><label>Duracion en horas:  </label></td>
-				    <td> <label>`+ curso.horas +`</label></td>
+				    <td align="left"> <label>`+ curso.horas +`</label></td>
 				  </tr> 
-				  <tr align="right">
-				    <td><label>Estado:  </label></td>
-				    <td> <label>`+ curso.estado +`</label></td>
+				  <tr >
+				    <td align="right"><label>Estado:  </label></td>
+				    <td align="left"> <label  >`+ curso.estado +`</label></td>
 				  </tr> 
 				</table>
+
+				
 				<br> <br>
-  	 <input type ='button' value = '<-- Volver' onclick="window.open('http://localhost:3000/listar', 'width=800,height=600');"/> 
-  	 <input type ='button' value = 'Inscribirse -->' onclick="window.open('http://localhost:3000/inscripcion?id=`+curso.id+`', 'width=800,height=600');"/> `;
+
+  	 <input type ='button'  class="btn-primary" value = '<-- Volver' onclick="window.open('http://localhost:3000/listar', 'width=800,height=600');"/> 
+  	 <input type ='button' class="btn-primary" value = 'Inscribirse -->' onclick="window.open('http://localhost:3000/inscripcion?id=`+curso.id+`', 'width=800,height=600');"/> 
+
+  	 </div>`;
+
+
 	}
 	return texto;
 });
