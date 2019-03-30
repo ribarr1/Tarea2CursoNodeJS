@@ -3,24 +3,31 @@
 
     
 
-<div class="col-sm-6 main-section mx-auto form-group">
+<div class="col-sm-6 main-section mx-auto">
   <p>
      Registro de cursos:
      </p><br>
+
+   <form action="/creaCurso" method="post">
  <table class="table table-striped table-bordered">
+  <tr>
+    <td  align="right"> <label for="id">* id:  </label></td>
+    <td><input type="text" name="id" required></td>
+  </tr>
   <tr>
     <td  align="right"> <label for="nombre">* Nombre:  </label></td>
     <td><input type="text" name="nombre" required></td>
   </tr>
   <tr>
     <td  align="right"><label for="descripcion">* Descripcion:  </label></td>
-    <td><input type="text" name="descripcion" required></td>
+
+    <td><textarea class="form-control rounded-0" name="descripcion" rows="3"></textarea></td>
   </tr>
   <tr>
     <td  align="right"><label for="valor">* Valor:  </label></td>
     <td><input type="number" name="valor" required></td>
   </tr>
-  <tr >
+   <tr >
     <td align="right"><label for="modalidad">Modalidad:  </label></td>
     <td ><select name="modalidad">
       <option value="presencial">Presencial</option>
@@ -33,10 +40,10 @@
   </tr>
   
 </table>
-     <input type ='button'  class="btn-primary" value = '<-- Volver' onclick="window.open('http://localhost:3000', 'width=800,height=600');"/> 
-     <button class="btn-primary">Enviar</button><br><br>
+       <input type ='button'  class="btn-primary" value = '<-- Volver' onclick="window.open('http://localhost:3000', 'width=800,height=600');"/> 
+     <button type="submit" class="submit btn-primary">Enviar</button><br><br>
 </form>
-
+ 
 
 
 </div>

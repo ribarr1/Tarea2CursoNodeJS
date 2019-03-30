@@ -27,7 +27,7 @@ hbs.registerHelper('detalleCurso', (id) =>{
 		return curso;
 	else{
 		texto = `
-					<table class="table table-bordered table-condensed" >
+					<table class="table table-bordered table-striped" >
 				<div class="col-xs-3"> 	
 				  <tr align="right"> 
 				    <td><label> Id: </label></td>
