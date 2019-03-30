@@ -86,11 +86,12 @@ const crear = (estudiante) => {
 		telefono: estudiante.telefono,
 		id:estudiante.id
 	};
-	console.log(listaEstudiantes);
+	console.log(est);
 	let ins ={
 			documento:estudiante.documento,
 			id:estudiante.id
 		};  
+		console.log (ins);
 	let duplicado = listaEstudiantes.find(doc=>doc.documento == estudiante.documento);
 	if(!duplicado){
 		listaEstudiantes.push(est);

@@ -19,15 +19,13 @@ hbs.registerHelper('eliminarAspirante', (id,documento) =>{
 	return resp;
 });
 
-
-hbs.registerHelper('detalleCurso', (id) =>{
+	hbs.registerHelper('detalleCurso', (id) =>{
 
 	curso = funciones.mostrarcurso(id);
 	if(curso=="no existe el curso")
 		return curso;
 	else{
-		texto = `
-					<table class="table table-bordered table-striped" >
+		texto = `<table class="table table-bordered table-striped" >
 				<div class="col-xs-3"> 	
 				  <tr align="right"> 
 				    <td><label> Id: </label></td>
@@ -138,7 +136,8 @@ hbs.registerHelper('listaCursoscoor', () =>{
 
 hbs.registerHelper('listarPorCurso', (id) =>{
 	lista=funciones.listarporcurso(id);
-
+	console.log(id);
+	console.log("ese era el id");
 
 	let texto = "<table class='table table-striped table-bordered'> \
 	<thead class='thead-dark'>\
@@ -188,7 +187,8 @@ hbs.registerHelper('crearCurso', (id, nombre,descripcion,valor,modalidad,horas) 
 });
 
 hbs.registerHelper('crearInscripcion', (documento, nombre,correo,telefono,id) =>{
-
+    console.log("este es el id del helper");
+    console.log(id);
 	let inscripcion = {
 		documento: documento,
 		nombre: nombre,

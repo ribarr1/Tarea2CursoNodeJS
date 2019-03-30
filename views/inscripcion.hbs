@@ -20,7 +20,7 @@
     </div>
   <div class="form-group">
     <label for="nombre">* Nombre:  </label>
-    <input type="text" class="form-control" name="Nombre" placeholder="Ingresa tu nombre completo" required="true">
+    <input type="text" class="form-control" name="nombre" placeholder="Ingresa tu nombre completo" required="true">
   </div>
   <label for="correo">Correo electronico</label>
     <input type="email" class="form-control" name="correo" aria-describedby="emailHelp" placeholder="Ingresa tu correo electronico" required="true">
@@ -29,6 +29,7 @@
     <label for="nombre">* Telefono:  </label>
     <input type="text" class="form-control" name="telefono" placeholder="Ingresa tu numero de telefono" required="true">
   </div>
+  <td><input type="hidden" name="id" value={{id}} ></td>
   <button type="submit" class="btn btn-primary">Enviar</button>
   </div>
 </form>
